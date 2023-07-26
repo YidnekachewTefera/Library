@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    background-color: rgb(49, 47, 47);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(222, 228, 228);
+}
+.addButton{
+    position: fixed;
+    bottom: 0;
+    background-color: beige;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 20%;
+    height: 2rem;
+    font-size: 30px;
+    border: 1px solid rgb(164, 194, 203);
+    background-color: beige;
+}
+.wrapper{
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    height: 28rem;
+    border-radius: 15px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form >input{
+    width: 95%;
+    height: 4rem;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.submit{
+    font-size: 40px;
+    background-color: rgb(121, 245, 121);
+}
+.checkbox-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    width: 96%;
+    background-color: white;
+    height: 4rem;
+    font-size: 2rem;
+}
+.checkbox-wrapper > input{
+    height: 30px;
+    width: 30px;
+}
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+}
