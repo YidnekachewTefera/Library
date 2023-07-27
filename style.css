@@ -66,4 +66,50 @@ form >input{
     justify-content: center;
     align-items: center;
     height: 35rem;
+    display: none;
+}
+.displayForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+}
+.book-container{
+    display: flex;
+    flex-direction: column;
+}
+.book-container> h2{
+    text-align: center;
+    color: antiquewhite;
+}
+.books{
+    display: flex;
+    flex-wrap: wrap;
+}
+.books >div{
+    display: flex;
+    background-color: rgb(222, 228, 228);
+    width: 30%;
+    margin: 10px;
+    box-shadow: 2px 5px 5px 2px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+   
+}
+.books >div>ul{
+    padding-left: 5px;
+}
+li{
+    list-style: none;
+}
+li >div{
+    margin-top: 10px;
+}
+.readStatus{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(149, 224, 149);
+    height: 2rem;
+    font-size: 30px;
 }
