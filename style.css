@@ -100,6 +100,9 @@ form >input{
 .books >div>ul{
     padding-left: 5px;
 }
+ul{
+    width: 100%;
+}
 li{
     list-style: none;
 }
@@ -112,4 +115,22 @@ li >div{
     background-color: rgb(149, 224, 149);
     height: 2rem;
     font-size: 30px;
+}
+.delete-edit-button-container{
+    margin-top: 10px;
+    width: 100%;
+}
+.delete-edit-button-container >.delete{
+    width: 50%;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 5px;
+}
+.delete-edit-button-container>.edit{
+    width: 50%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.do-not-display{
+    display: none;
 }
