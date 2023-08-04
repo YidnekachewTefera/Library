@@ -28,7 +28,7 @@ booksPlate.addEventListener("submit", addBooks);
 function populateList(book = [], booksContainer) {
   booksContainer.innerHTML = book.map((boo, i) => {
     return `
-    <div >
+    <div id="item${i}">
       <ul>
           <li id="title${i}">Title:  ${boo.title}</li>
           <li id="author${i}">Author: ${boo.author}</li>
@@ -36,7 +36,7 @@ function populateList(book = [], booksContainer) {
           <li id="readStatusOf${i}">
               <div class="readStatus">Read</div>
           </li>
-          <li class="delete-edit-button-container"><button class="delete" id="delete" data-index=${i}> Delete</button><button class="edit">Edit</button></li>
+          <li class="delete-edit-button-container"><button class="delete" id="delete" data-index=${i}> Delete</button><button class="edit" data-index=${i}>Edit</button></li>
       </ul>
     </div>
     `;
@@ -68,6 +68,16 @@ function deleteConfirmation(e) {
 }
 */
 function deleteBook(e) {
-  this.parentElement.parentElement.parentElement.remove();
+  if (e.target.id != "delete") return;
+  let el = e.target;
+  let Index = el.dataset.index;
+  console.log(Index);
+  e.target.parentElement.parentElement.parentElement.remove();
+  const storedData = JSON.parse(localStorage.getItem("myLibrary"));
+  console.table(storedData);
 }
-deletee.addEventListener("click", deleteBook);
+function edit(e) {
+  if (e.target.id != "edit") return;
+  console.log("edit button clicked");
+}
+books.addEventListener("click", deleteBook);
